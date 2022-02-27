@@ -1,14 +1,16 @@
-import express from 'express'
-import 'dotenv/config'
+import app from './src/app'
+import mongoose from "mongoose";
+
+const APP_PORT = process.env.PORT;
+const DB_PORT = process.env.MONGO_URI;
 
 
-const APP_PORT = process.env.PORT
-const app = express()
+mongoose
+    .connect(DB_PORT)
+    .then(() => console.log("connected"))
+    .catch(() => console.log("Error"));
 
-
-app.get('/', (req, res) => {
-  res.send('Hey There')
-})
-
-
-app.listen(APP_PORT, console.log(`Server listening on http://localhost:${APP_PORT}`))
+app.listen(
+  APP_PORT,
+  console.log(`Server listening on http://localhost:${APP_PORT}`)
+);

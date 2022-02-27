@@ -30,6 +30,13 @@
     "@babel/preset-env": "^7.16.11",
     "babel-jest": "^27.5.1",
     "jest": "^27.5.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testTimeout": 10000
   }
 }
