@@ -23,3 +23,12 @@ describe("POST /decode", () => {
     expect(response.body).toBeDefined()
   });
 });
+
+
+describe("POST /statistic/:shorty", () => {
+  test("should return a a response body", async () => {
+    const response = await request(app).post("/statistic/");
+    expect(response.statusCode).toBe(200);
+    expect(response.body).toBeDefined()
+  });
+});

@@ -1,7 +1,7 @@
 import Joi from "joi";
 
-const UrlValidator = Joi.string()
+export const UrlValidator = Joi.string()
   .uri()
   .message("url must be a valid URL string");
 
-export default UrlValidator;
+export const ShortUrlValidator = Joi.string().uri().required().label("Short Url");
