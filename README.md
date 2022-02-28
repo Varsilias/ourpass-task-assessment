@@ -1,12 +1,17 @@
 ## Ourpass Backend Task Solution
 
-This repository contains the code to the solution for the backend engineering assessment by [Ourpass]('https://ourpass.co)
+This repository contains the code to the solution for the backend engineering assessment by [https://ourpass.co]('https://ourpass.co)
 
 ### Project Setup
+
+This project is built with NodeJs, MongoDB, Express & with the popular **dotenv** package for programmatically accessing environment variables.
+
+A mirrow of the **.env** file which should and is not a part of this repository is provided in the **.env.example** file at the project root directory
 
 - Clone this project by running the command ```git clone git@github.com:danielokoronkwo-coder/ourpass-task-assessment.git```
 - run ``npm install``
 - Create a ``.env`` file at the root of your project directory
-- Copy the content of ```.env.example``` file to the ``.env`` file
+- Copy the content of ```.env.example``` file ``.env`` file
 - Build something amazing
-- 
+- Start the development server with the command ```yarn start:dev``` or ```npm run start:dev```
+- The run the test run the command ```yarn test``` or ```npm test```
