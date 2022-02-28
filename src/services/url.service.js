@@ -54,7 +54,6 @@ class UrlService {
       response.clicks++
       response.lastVisited = new Date(Date.now()).toISOString()
       await response.save()
-      console.log(response)
       return { url: response.url };
     } catch (error) {
       return error;
