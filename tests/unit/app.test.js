@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import app from "../../src/app";
 
 beforeAll(() => {
-  const DB_PORT = process.env.MONGO_URI;
+  const DB_PORT = process.env.MONGO_URI_TEST;
   mongoose.connect(DB_PORT);
 });
 
