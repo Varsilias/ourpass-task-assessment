@@ -1,8 +1,8 @@
 import app from './src/app'
 import mongoose from "mongoose";
 
-const APP_PORT = process.env.PORT;
-const DB_PORT = process.env.MONGO_URI;
+const APP_PORT = process.env.PORT || 9000;
+const DB_PORT = process.env.MONGO_URI || 'mongodb://localhost:27017/ourpass';
 
 
 mongoose

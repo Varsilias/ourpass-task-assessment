@@ -39,7 +39,7 @@
   },
   "jest": {
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/"    
     ],
     "testTimeout": 10000
   }

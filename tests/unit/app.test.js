@@ -19,7 +19,7 @@ describe("The root path responds with status code of 200", () => {
 });
 
 describe("POST /encode", () => {
-  test("should return a a response body", async () => {
+  test("should return a response body", async () => {
     const response = await request(app).post("/encode");
     expect(response.statusCode).toBe(200);
     expect(response.body).toBeDefined();
@@ -27,15 +27,15 @@ describe("POST /encode", () => {
 });
 
 describe("POST /decode", () => {
-  test("should return a a response body", async () => {
+  test("should return a response body", async () => {
     const response = await request(app).post("/decode");
     expect(response.statusCode).toBe(200);
     expect(response.body).toBeDefined();
   });
 });
 
-describe("POST /statistic/:shorty", () => {
-  test("should return a a response body", async () => {
+describe("GET /statistic/:shorty", () => {
+  test("should return a response body", async () => {
     const path = "DjWUqnelCHE6zvW7vIKA1";
     const response = await request(app).get(`/statistic/${path}`);
     expect(response.statusCode).toBe(200);
