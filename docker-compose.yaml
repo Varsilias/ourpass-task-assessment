@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: mongo_db
+    restart: always
+    env_file: ./.env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    volumes:
+      - db:/data/db
+  ourpass-task:
+    depends_on:
+      - mongodb
+    build: .
+    restart: always
+    env_file: ./.env
+    environment:
+      MONGO_URI: mongodb://root:password@mongodb
+    ports:
+      - "9000:9000"
+volumes:
+  db:

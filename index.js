@@ -1,8 +1,15 @@
 import app from './src/app'
 import mongoose from "mongoose";
 
+/**
+ * If no MONGO_URI environment variable is not set in the docker-compose file
+ * the alternativeMongoUri will be use to connect to the mongo container
+ */
+const alternativeMongoUri = 'mongodb://mongodb:27017'
+
+
 const APP_PORT = process.env.PORT || 9000;
-const DB_PORT = process.env.MONGO_URI || 'mongodb://localhost:27017/ourpass';
+const DB_PORT = process.env.MONGO_URI || alternativeMongoUri;
 
 
 mongoose
